@@ -76,7 +76,7 @@ void vetorOrdenado(long vetor[], int tam){
     if(imprimir == 1){
         printf("Vetor ordenado:\n");
         for(int i = 0; i < tam; i++){
-            printf("%ld\n", vetor[i]);
+            printf("%d. %ld\n", i, vetor[i]);
         }
     }
 }
