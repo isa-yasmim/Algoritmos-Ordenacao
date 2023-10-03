@@ -67,16 +67,8 @@ void fileReader(FILE *arq, long vetor[], char nome[]){
 //////////////vetor ordenado
 
 void vetorOrdenado(long vetor[], int tam){
-    int imprimir = 2;   
-    printf("Mostrar vetor ordenado?\n");
-    printf("1 - Sim\n");
-    printf("2 - Nao\n");
-    scanf("%d", &imprimir);
-
-    if(imprimir == 1){
-        printf("Vetor ordenado:\n");
+        printf("Vetor:\n");
         for(int i = 0; i < tam; i++){
-            printf("%d. %ld\n", i, vetor[i]);
+            printf("%d - %d\n", i, vetor[i]);
         }
-    }
 }
