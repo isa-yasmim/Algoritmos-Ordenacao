@@ -25,6 +25,7 @@ int main(){
         printf("4 - Radix Sort\n");
         printf("5 - Quick Sort Hoare\n");
         printf("6 - Quick Sort Lomuto\n");
+        printf("7 - Heap Sort\n");
         printf("10 - Gerar arquivo\n");
         printf("20 - Escolher arquivo\n");
         printf("30 - Imprimir vetor\n");
@@ -68,7 +69,12 @@ int main(){
                 gettimeofday(&end, NULL);
                 Tempo = (double)(end.tv_sec - begin.tv_sec) + ((double)(end.tv_usec - begin.tv_usec) / 1000000);
                 break;
-
+            case 7:
+                gettimeofday(&begin, NULL);
+                heapSort(vetor, tam);
+                gettimeofday(&end, NULL);
+                Tempo = (double)(end.tv_sec - begin.tv_sec) + ((double)(end.tv_usec - begin.tv_usec) / 1000000);
+                break;
             case 10:
                 printf("Tamanho do arquivo\n");
                 scanf("%d", &tam);

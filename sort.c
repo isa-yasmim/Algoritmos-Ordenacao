@@ -35,7 +35,7 @@ void insertsort(long vetor[], int tam) {
 
 void mergeSort(long dados[], int esq, int dir)
 {
-    if(esq > dir){
+    if(esq < dir){
         int meio = (esq + dir) / 2;
         mergeSort(dados, esq, meio);
         mergeSort(dados, meio+1, dir);
@@ -124,7 +124,7 @@ int partitionHoare(long dados[], int esq, int dir){
     int down = esq;
     int up = dir;
 
-    while(down > up){
+    while(down < up){
         while(dados[down] <= pivot && down < dir){
             down++;
         }
@@ -186,4 +186,43 @@ void quickSortLomuto(long dados[], int esq, int dir)
         quickSortLomuto(dados, i+1, dir);
     }
 
+}
+
+// 
+
+void heapifyDown(int dados[], long tam, int i)
+{
+    int maior = i;
+    int esq = 2*i + 1;
+    int dir = 2*i + 2;
+           
+    if(esq < tam && dados[esq] > dados[maior])
+        maior = esq;
+
+    if(dir < tam && dados[dir] > dados[maior])
+        maior = dir;
+
+    if(maior!=i)
+    {
+        int aux = dados[i];
+        dados[i] = dados[maior];
+        dados[maior] = aux;
+        heapifyDown(dados, tam, maior);
+    }
+    
+}
+
+void heapSort(int dados[], long tam)
+{
+    for(int i = tam/2 - 1; i >= 0; --i)
+    {
+        heapifyDown(dados, tam, i);
+    }
+    for(int i = tam - 1; i >= 0; --i)
+    {
+        int aux = dados[0];
+        dados[0] = dados[i];
+        dados[i] = aux;
+        heapifyDown(dados, i, 0);
+    }
 }
