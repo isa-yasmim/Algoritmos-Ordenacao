@@ -120,7 +120,8 @@ void radixSort(long dados[], long tam)
 //
 
 int partitionHoare(long dados[], int esq, int dir){
-    int pivot = dados[esq];
+    int meio = (esq + dir) / 2;
+    int pivot = dados[meio];
     int down = esq;
     int up = dir;
 
@@ -158,7 +159,8 @@ void quickSortHoare(long dados[], int esq, int dir)
 //
 
 int partitionLomuto(long dados[], int esq, int dir){
-    int pivot = dados[dir];
+    int meio = (esq + dir) / 2;
+    int pivot = dados[meio];
     int i = esq - 1;
 
     for(int j = esq; j <= dir - 1; j++){
