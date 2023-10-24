@@ -38,42 +38,56 @@ int main(){
                 bubblesort(vetor, tam);
                 gettimeofday(&end, NULL);
                 Tempo = (double)(end.tv_sec - begin.tv_sec) + ((double)(end.tv_usec - begin.tv_usec) / 1000000);
+                printf("Tempo de execucao: %.8f\n", Tempo);
+                free(vetor);
                 break;
             case 2:
                 gettimeofday(&begin, NULL);
                 insertsort(vetor, tam);
                 gettimeofday(&end, NULL);
                 Tempo = (double)(end.tv_sec - begin.tv_sec) + ((double)(end.tv_usec - begin.tv_usec) / 1000000);
+                printf("Tempo de execucao: %.8f\n", Tempo);
+                free(vetor);
                 break;
             case 3:
                 gettimeofday(&begin, NULL);
                 mergeSort(vetor, 0, tam-1);
                 gettimeofday(&end, NULL);
                 Tempo = (double)(end.tv_sec - begin.tv_sec) + ((double)(end.tv_usec - begin.tv_usec) / 1000000);
+                printf("Tempo de execucao: %.8f\n", Tempo);
+                free(vetor);
                 break;
             case 4:
                 gettimeofday(&begin, NULL);
                 radixSort(vetor, tam);
                 gettimeofday(&end, NULL);
                 Tempo = (double)(end.tv_sec - begin.tv_sec) + ((double)(end.tv_usec - begin.tv_usec) / 1000000);
+                printf("Tempo de execucao: %.8f\n", Tempo);
+                free(vetor);
                 break;
             case 5:
                 gettimeofday(&begin, NULL);
                 quickSortHoare(vetor, 0, tam-1);
                 gettimeofday(&end, NULL);
                 Tempo = (double)(end.tv_sec - begin.tv_sec) + ((double)(end.tv_usec - begin.tv_usec) / 1000000);
+                printf("Tempo de execucao: %.8f\n", Tempo);
+                free(vetor);
                 break;
             case 6:
                 gettimeofday(&begin, NULL);
                 quickSortLomuto(vetor, 0, tam-1);
                 gettimeofday(&end, NULL);
                 Tempo = (double)(end.tv_sec - begin.tv_sec) + ((double)(end.tv_usec - begin.tv_usec) / 1000000);
+                printf("Tempo de execucao: %.8f\n", Tempo);
+                free(vetor);
                 break;
             case 7:
                 gettimeofday(&begin, NULL);
                 heapSort(vetor, tam);
                 gettimeofday(&end, NULL);
                 Tempo = (double)(end.tv_sec - begin.tv_sec) + ((double)(end.tv_usec - begin.tv_usec) / 1000000);
+                printf("Tempo de execucao: %.8f\n", Tempo);
+                free(vetor);
                 break;
             case 10:
                 printf("Tamanho do arquivo\n");
